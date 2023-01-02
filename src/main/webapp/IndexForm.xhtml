@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>etanah-tutorial-spring</title>
+    </h:head>
+    
+    <h:body>
+    
+        <h:form id="mainForm">
+			<h:panelGrid id="panel" cellpadding="10" cellspacing="1">
+			<p:growl id="growl" showDetail="true" sticky="true" autoUpdate="true"/>
+			
+			<p:panel header="Group Activity">
+				 <h:panelGroup style="display:block; text-align:center">
+				 	<p:commandButton action="./UnitPendaftaran/PendaftaranUnitForm?faces-redirect=true" value="Create unit"  />
+					<p:commandButton action="ListGroupForm?faces-redirect=true" value="List Group" />
+				 
+				 </h:panelGroup>
+			</p:panel>
+				
+			<p:panel header="User">
+			
+				 <h:panelGroup style="display:block; text-align:center">
+				 	<p:commandButton action="CreateUserForm?faces-redirect=true" value="Create User"  />
+					<p:commandButton action="ListUserForm?faces-redirect=true" value="List User" />
+				 
+				 </h:panelGroup>
+			</p:panel>	
+				
+				
+			</h:panelGrid>
+
+        </h:form>
+    
+        <ui:debug hotkey="x" />
+    
+    </h:body>
+    
+</html>
